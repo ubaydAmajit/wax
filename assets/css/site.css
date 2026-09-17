@@ -12,8 +12,8 @@
   --line:      rgba(255, 255, 255, 0.13);
   --line-soft: rgba(255, 255, 255, 0.07);
 
-  --text:  #efeaed;
-  --muted: #aaa0a7;
+  --text:  #f4f0f2;
+  --muted: #c5bcc2;
   --white: #ffffff;
 
   --pink:      #ff3d84;
@@ -21,10 +21,11 @@
   --pink-wash: rgba(255, 61, 132, 0.12);
 
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-body:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-body:    "Lora", Georgia, "Times New Roman", serif;
+  --font-ui:      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
   --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.9rem);
-  --step-0:  clamp(1rem, 0.97rem + 0.18vw, 1.08rem);
+  --step-0:  clamp(1.02rem, 0.98rem + 0.2vw, 1.12rem);
   --step-1:  clamp(1.18rem, 1.09rem + 0.45vw, 1.42rem);
   --step-2:  clamp(1.5rem, 1.3rem + 0.95vw, 2.1rem);
   --step-3:  clamp(1.95rem, 1.6rem + 1.9vw, 3rem);
@@ -57,7 +58,7 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   font-size: var(--step-0);
-  line-height: 1.68;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 body.is-locked { overflow: hidden; }
@@ -116,7 +117,7 @@ strong { color: var(--white); font-weight: 600; }
 .section--pink { background: linear-gradient(135deg, var(--pink-dim), #8e0f42); color: #fff; }
 .section--pink a:not(.btn) { color: #fff; }
 
-.lede { font-size: var(--step-1); line-height: 1.55; color: var(--muted); }
+.lede { font-size: var(--step-1); line-height: 1.6; color: var(--text); }
 .section--pink .lede { color: rgba(255, 255, 255, 0.92); }
 
 .center { text-align: center; }
@@ -160,6 +161,7 @@ strong { color: var(--white); font-weight: 600; }
 
 /* --- Buttons ------------------------------------------------------------ */
 .btn {
+  font-family: var(--font-ui);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -188,6 +190,7 @@ strong { color: var(--white); font-weight: 600; }
 /* --- Promo bar ---------------------------------------------------------- */
 .promo {
   margin: 0;
+  font-family: var(--font-ui);
   padding: 0.55rem var(--gutter);
   background: var(--pink);
   color: #16070e;
@@ -229,6 +232,7 @@ strong { color: var(--white); font-weight: 600; }
   text-indent: 0.34em;
 }
 .brand__sub {
+  font-family: var(--font-ui);
   margin-top: 0.4rem;
   font-size: 0.58rem;
   font-weight: 600;
@@ -241,6 +245,7 @@ strong { color: var(--white); font-weight: 600; }
 .nav { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
 .nav__list { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); list-style: none; margin: 0; padding: 0; }
 .nav__link {
+  font-family: var(--font-ui);
   position: relative;
   display: inline-block;
   padding: 0.45rem 0.1rem;
@@ -293,7 +298,7 @@ strong { color: var(--white); font-weight: 600; }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bars span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bars span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] .nav-toggle__bars span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
-.nav-toggle__label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-toggle__label { font-family: var(--font-ui); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
 
 @media (max-width: 820px) {
   .nav-toggle { display: inline-flex; }
@@ -342,6 +347,7 @@ strong { color: var(--white); font-weight: 600; }
   padding-bottom: env(safe-area-inset-bottom);
 }
 .action-bar a {
+  font-family: var(--font-ui);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,6 +390,7 @@ strong { color: var(--white); font-weight: 600; }
   margin: 2rem 0 0;
   padding: 1.35rem 0 0;
   border-top: 1px solid var(--line);
+  font-family: var(--font-ui);
   font-size: var(--step--1);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -415,14 +422,14 @@ strong { color: var(--white); font-weight: 600; }
   border-radius: var(--radius-lg);
 }
 .section--raised .card { background: var(--surface-2); }
-.card p { color: var(--muted); }
+
 
 /* --- Treatment lists ---------------------------------------------------- */
 .treatments { list-style: none; margin: 0; padding: 0; }
 .treatments li { padding: 1rem 0; border-bottom: 1px solid var(--line-soft); }
 .treatments li:last-child { border-bottom: 0; }
 .treatments b { display: block; color: var(--white); font-weight: 600; }
-.treatments span { display: block; margin-top: 0.15rem; font-size: var(--step--1); color: var(--muted); }
+.treatments span { display: block; margin-top: 0.2rem; color: var(--muted); }
 
 .group-title {
   margin: 0 0 0.25rem;
@@ -432,6 +439,7 @@ strong { color: var(--white); font-weight: 600; }
 }
 
 .note {
+  font-family: var(--font-ui);
   padding: 1.05rem 1.3rem;
   background: var(--pink-wash);
   border-left: 3px solid var(--pink);
@@ -453,6 +461,7 @@ strong { color: var(--white); font-weight: 600; }
 }
 .table th, .table td { padding: 0.9rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line-soft); }
 .table thead th {
+  font-family: var(--font-ui);
   background: var(--surface-2);
   color: var(--white);
   font-size: var(--step--1);
@@ -491,7 +500,7 @@ strong { color: var(--white); font-weight: 600; }
   transition: transform 0.25s var(--ease);
 }
 .faq__item[open] summary::after { transform: rotate(-135deg) translate(-2px, -2px); }
-.faq__body { padding-bottom: 1.35rem; color: var(--muted); max-width: 72ch; }
+.faq__body { padding-bottom: 1.35rem; color: var(--text); max-width: 72ch; }
 .faq__body ul { margin: 0 0 1em; padding-left: 1.15rem; }
 .faq__body li { margin-bottom: 0.4rem; }
 .faq__body li::marker { color: var(--pink); }
@@ -505,7 +514,7 @@ strong { color: var(--white); font-weight: 600; }
   line-height: 1.45;
   color: var(--white);
 }
-.quote figcaption { font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.quote figcaption { font-family: var(--font-ui); font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
 .pull-quote {
   margin: 0;
@@ -519,7 +528,7 @@ strong { color: var(--white); font-weight: 600; }
 .pull-quote cite {
   display: block;
   margin-top: 0.9rem;
-  font-family: var(--font-body);
+  font-family: var(--font-ui);
   font-style: normal;
   font-size: var(--step--1);
   letter-spacing: 0.12em;
@@ -529,7 +538,7 @@ strong { color: var(--white); font-weight: 600; }
 
 /* --- Steps and info lists ----------------------------------------------- */
 .steps { counter-reset: step; list-style: none; margin: 0; padding: 0; }
-.steps li { counter-increment: step; position: relative; padding: 0 0 1.4rem 3rem; color: var(--muted); }
+.steps li { counter-increment: step; position: relative; padding: 0 0 1.4rem 3rem; color: var(--text); }
 .steps li:last-child { padding-bottom: 0; }
 .steps li::before {
   content: counter(step, decimal-leading-zero);
@@ -543,6 +552,7 @@ strong { color: var(--white); font-weight: 600; }
 .info-list { margin: 0; }
 .info-list div + div { margin-top: 1.25rem; }
 .info-list dt {
+  font-family: var(--font-ui);
   margin-bottom: 0.25rem;
   font-size: var(--step--1);
   font-weight: 700;
@@ -578,17 +588,17 @@ strong { color: var(--white); font-weight: 600; }
 }
 .site-footer__grid { position: relative; z-index: 1; display: grid; gap: clamp(1.75rem, 3.5vw, 3rem); }
 @media (min-width: 620px) { .site-footer__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1000px) { .site-footer__grid { grid-template-columns: 1.5fr 1fr 1fr; } }
+@media (min-width: 1000px) { .site-footer__grid { grid-template-columns: 1.6fr 1fr 1fr 1.1fr; } }
 .site-footer h2 {
   margin-bottom: 1rem;
-  font-family: var(--font-body);
+  font-family: var(--font-ui);
   font-size: var(--step--1);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--pink);
 }
-.footer-list { list-style: none; margin: 0; padding: 0; color: var(--muted); }
+.footer-list { font-family: var(--font-ui); list-style: none; margin: 0; padding: 0; color: var(--muted); }
 .footer-list li + li { margin-top: 0.55rem; }
 .footer-list a { color: var(--muted); text-decoration: none; }
 .footer-list a:hover { color: var(--pink); }
@@ -619,3 +629,125 @@ strong { color: var(--white); font-weight: 600; }
   font-size: var(--step--1);
   color: var(--muted);
 }
+
+/* --- Testimonial slider -------------------------------------------------
+   A scroll-snap track, so without JavaScript it is still a swipeable,
+   readable row of quotes. JS adds the arrows, dots and autoplay. */
+.slider { position: relative; }
+.slider__track {
+  display: flex;
+  /* The tallest quote sets the track height, so centre the shorter ones
+     rather than leaving them stranded at the top. */
+  align-items: center;
+  min-height: 9.5rem;
+  gap: clamp(1rem, 3vw, 2rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding-bottom: 0.5rem;
+}
+.slider__track::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) { .slider__track { scroll-behavior: auto; } }
+
+.slider__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
+  text-align: center;
+}
+.slider__slide blockquote {
+  margin: 0 auto 1.1rem;
+  /* Wide enough that the longest review does not tower over the shortest. */
+  max-width: 32ch;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.35rem, 1.15rem + 0.85vw, 1.9rem);
+  line-height: 1.36;
+  color: var(--white);
+}
+.slider__slide figcaption {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink);
+}
+
+.slider__controls { display: none; }
+.slider.is-enhanced .slider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+.slider__btn {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.slider__btn:hover { border-color: var(--pink); color: var(--pink); }
+.slider__btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+.slider__dots { display: flex; gap: 0.5rem; }
+.slider__dots button {
+  width: 8px; height: 8px;
+  padding: 0;
+  background: var(--line);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.slider__dots button:hover { background: var(--muted); }
+.slider__dots button[aria-current="true"] { background: var(--pink); transform: scale(1.4); }
+
+/* --- Review cards (testimonials page) ----------------------------------- */
+.review {
+  height: 100%;
+  margin: 0;
+  padding: clamp(1.35rem, 2.6vw, 1.9rem);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+}
+.section--raised .review { background: var(--surface-2); }
+.review blockquote {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: var(--white);
+}
+.review figcaption {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- Press mentions ----------------------------------------------------- */
+.press { display: grid; gap: 1rem; }
+@media (min-width: 760px) { .press { grid-template-columns: repeat(3, 1fr); } }
+.press > * {
+  display: block;
+  padding: 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s var(--ease);
+}
+.press a:hover { border-color: var(--pink); color: var(--text); }
+.press b { display: block; margin-bottom: 0.3rem; font-family: var(--font-display); font-size: var(--step-1); color: var(--white); }
+.press span { color: var(--text); }

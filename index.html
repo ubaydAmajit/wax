@@ -9,7 +9,7 @@
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
@@ -61,13 +61,51 @@
       </div>
     </section>
 
-    <section class="section section--tight section--raised">
-      <div class="wrap wrap--narrow">
+    <section class="section section--raised">
+      <div class="wrap">
         <div class="ornament" aria-hidden="true"></div>
-        <blockquote class="pull-quote">
-          "Simply the best Brazilian Wax in town, bar none!"
-          <cite>Cristine C, Auckland</cite>
-        </blockquote>
+        <div class="slider" data-slider role="group" aria-roledescription="carousel" aria-label="Client reviews">
+          <div class="slider__track" data-slider-track tabindex="0">
+            <figure class="slider__slide">
+              <blockquote>"Simply the best Brazilian Wax in town, bar none!"</blockquote>
+              <figcaption>Cristine C, Auckland</figcaption>
+            </figure>
+            <figure class="slider__slide">
+              <blockquote>"The best wax I've ever had and pretty pain free."</blockquote>
+              <figcaption>Strip client</figcaption>
+            </figure>
+            <figure class="slider__slide">
+              <blockquote>"I struggled to find a good wax therapist when I moved to Wellington 3 years ago, and then I found Strip, and now wouldn't ever go anywhere else."</blockquote>
+              <figcaption>Regular client</figcaption>
+            </figure>
+            <figure class="slider__slide">
+              <blockquote>"I can't believe how quick this wax was, and how clean it was too."</blockquote>
+              <figcaption>First time client</figcaption>
+            </figure>
+            <figure class="slider__slide">
+              <blockquote>"Kate makes you feel so comfortable and is so speedy and has an excellent waxing technique."</blockquote>
+              <figcaption>Strip client</figcaption>
+            </figure>
+            <figure class="slider__slide">
+              <blockquote>"Full back wax in 20 minutes for $35. An absolute bargain."</blockquote>
+              <figcaption>Men's waxing client</figcaption>
+            </figure>
+            <figure class="slider__slide">
+              <blockquote>"Expert!"</blockquote>
+              <figcaption>Gemma B, London</figcaption>
+            </figure>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__btn" type="button" data-slider-prev aria-label="Previous review">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 4.6 13.9 3l-9 9 9 9 1.5-1.6-7.4-7.4z"/></svg>
+            </button>
+            <div class="slider__dots" data-slider-dots></div>
+            <button class="slider__btn" type="button" data-slider-next aria-label="Next review">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 4.6 10.1 3l9 9-9 9-1.5-1.6 7.4-7.4z"/></svg>
+            </button>
+          </div>
+        </div>
+        <p class="center" style="margin-top:1.75rem"><a href="testimonials.html">Read more reviews</a></p>
       </div>
     </section>
 
@@ -81,17 +119,17 @@
         <div class="trio">
           <div>
             <h3>Brazilian &amp; bikini</h3>
-            <p style="color:var(--muted)">Our specialty. Brazilian, extended bikini or standard bikini, styled exactly how you want it.</p>
+            <p>Our specialty. Brazilian, extended bikini or standard bikini, styled exactly how you want it.</p>
             <p><a href="waxing-menu.html#brazilian">See the styles</a></p>
           </div>
           <div>
             <h3>Legs, arms &amp; body</h3>
-            <p style="color:var(--muted)">Half legs through to full legs, underarms, stomach and lower back.</p>
+            <p>Half legs through to full legs, underarms, stomach and lower back.</p>
             <p><a href="waxing-menu.html#body">See the menu</a></p>
           </div>
           <div>
             <h3>Men's waxing</h3>
-            <p style="color:var(--muted)">Chest, back, shoulders and neck. Quick, discreet and no fuss.</p>
+            <p>Chest, back, shoulders and neck. Quick, discreet and no fuss.</p>
             <p><a href="waxing-menu.html#mens">See the menu</a></p>
           </div>
         </div>
@@ -108,15 +146,15 @@
         <div class="trio">
           <div>
             <h3>Fast, so less painful</h3>
-            <p style="color:var(--muted)">We aim to have you done in 15 to 30 minutes rather than 35 to 60. Being quick is what makes a wax bearable.</p>
+            <p>We aim to have you done in 15 to 30 minutes rather than 35 to 60. Being quick is what makes a wax bearable.</p>
           </div>
           <div>
             <h3>Hygiene is paramount</h3>
-            <p style="color:var(--muted)">Disposable gloves, spatulas and strips every single time. We never double dip, and everything else is sterilised to hospital grade.</p>
+            <p>Disposable gloves, spatulas and strips every single time. We never double dip, and everything else is sterilised to hospital grade.</p>
           </div>
           <div>
             <h3>Affordable, always</h3>
-            <p style="color:var(--muted)">Senior therapists at prices that give you the best value waxing in town, plus 10% off for student ID card holders.</p>
+            <p>Senior therapists at prices that give you the best value waxing in town, plus 10% off for student ID card holders.</p>
           </div>
         </div>
       </div>
@@ -178,6 +216,16 @@
             <li>49-55 Cuba Street</li>
             <li>Te Aro, Wellington 6011</li>
             <li><a href="location-and-about-us.html">How to find us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>More</h2>
+          <ul class="footer-list">
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="vajazzle.html">Vajazzle</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="book-now.html">Book now</a></li>
           </ul>
         </div>
 
