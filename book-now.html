@@ -31,10 +31,19 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <ul class="nav__list">
-            <li><a class="nav__link" href="index.html">Home</a></li>
-            <li><a class="nav__link" href="waxing-menu.html">Waxing</a></li>
-            <li><a class="nav__link" href="brazilian-wax-information.html">Brazilian Wax</a></li>
-            <li><a class="nav__link" href="location-and-about-us.html">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="waxing-menu.html">Waxing</a></li>
+            <li class="nav__item nav__item--sub">
+              <a class="nav__link" href="brazilian-wax-information.html">Brazilian Wax<svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4z"/></svg></a>
+              <ul class="nav__sub">
+                <li><a href="brazilian-wax-information.html">Brazilian wax information</a></li>
+                <li><a href="faqs.html#care">Preparation &amp; aftercare</a></li>
+                <li><a href="faqs.html">Waxing 101 &amp; FAQs</a></li>
+                <li><a href="vajazzle.html">Vajazzle</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="location-and-about-us.html">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
         <a class="btn btn--primary btn--sm" href="book-now.html" aria-current="page">Book now</a>
       </nav>
@@ -50,6 +59,7 @@
         <div class="btn-row" style="margin-top:1.75rem">
           <a class="btn btn--primary" href="https://bookings.gettimely.com/StripCuba/bb/book" rel="noopener">Book an appointment</a>
           <a class="btn btn--ghost" href="#terms">Read the terms</a>
+          <a class="btn btn--ghost" href="faqs.html#care">Preparation &amp; aftercare</a>
         </div>
       </div>
     </section>
@@ -59,9 +69,10 @@
         <div>
           <h2>Before you arrive</h2>
           <ol class="steps" style="margin-top:1.5rem">
-            <li><b>Let the hair grow</b>About a quarter of an inch, roughly the size of a grain of rice. Please do not shave in between appointments.</li>
+            <li><b>Let the hair grow</b>At least 5 to 10mm for best results, or 10mm for coarse hair before a first wax. Wait around 2 weeks after shaving.</li>
             <li><b>Bring your student ID</b>A current NZ student ID card gets you 10% off your treatment.</li>
             <li><b>Bank transfer only</b>Eftpos and card payments are not available. Please pay by bank transfer at the studio.</li>
+            <li><b>Skip the shower and the moisturiser</b>Soaking or oiling the hair softens it and makes it break. Wipes are provided at the studio.</li>
             <li><b>Give yourself time</b>Have a read of the <a href="location-and-about-us.html">location page</a> first. The James Smith Building has a few entrances.</li>
           </ol>
         </div>
@@ -184,10 +195,11 @@
         <div>
           <h2>More</h2>
           <ul class="footer-list">
-            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="faqs.html">Waxing 101 &amp; FAQs</a></li>
+            <li><a href="faqs.html#care">Preparation &amp; aftercare</a></li>
             <li><a href="vajazzle.html">Vajazzle</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="book-now.html">Book now</a></li>
+            <li><a href="contact.html">Contact us</a></li>
           </ul>
         </div>
 

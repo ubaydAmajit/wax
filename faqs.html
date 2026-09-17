@@ -31,10 +31,19 @@
 
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <ul class="nav__list">
-            <li><a class="nav__link" href="index.html">Home</a></li>
-            <li><a class="nav__link" href="waxing-menu.html">Waxing</a></li>
-            <li><a class="nav__link" href="brazilian-wax-information.html">Brazilian Wax</a></li>
-            <li><a class="nav__link" href="location-and-about-us.html">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="waxing-menu.html">Waxing</a></li>
+            <li class="nav__item nav__item--sub">
+              <a class="nav__link" href="brazilian-wax-information.html">Brazilian Wax<svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4z"/></svg></a>
+              <ul class="nav__sub">
+                <li><a href="brazilian-wax-information.html">Brazilian wax information</a></li>
+                <li><a href="faqs.html#care">Preparation &amp; aftercare</a></li>
+                <li><a href="faqs.html">Waxing 101 &amp; FAQs</a></li>
+                <li><a href="vajazzle.html">Vajazzle</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="location-and-about-us.html">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
         <a class="btn btn--primary btn--sm" href="book-now.html">Book now</a>
       </nav>
@@ -45,142 +54,188 @@
     <section class="page-head">
       <div class="filigree filigree--tr" aria-hidden="true"></div>
       <div class="wrap page-head__inner">
-        <h1>Waxing FAQs</h1>
-        <p class="lede">A little waxing education. When not to wax, how to prepare, how to look after your skin afterwards, and the questions we get asked most.</p>
+        <h1>Waxing 101</h1>
+        <p class="lede">Here you'll find a number of common questions and answers about waxing. It is highly recommended that you familiarize yourself with these.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--tight">
       <div class="wrap wrap--narrow">
-        <h2>When not to wax</h2>
-        <p class="lede">Waxing is not suitable in every situation. Please tell us when you book if any of these apply to you. It is usually not a problem, we just need to know.</p>
+        <p class="note">Please bear in mind that these answers are no substitute for the advice of a doctor. It is highly advisable to consult your doctor if you are unsure about waxing due to an existing medical condition, and that you avoid waxing for the proscribed times if you are taking any of the medications mentioned below.</p>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="wrap wrap--narrow">
+        <h2>Booking &amp; pricing</h2>
+        <div class="faq" style="margin-top:1.75rem">
+          <details class="faq__item">
+            <summary>Which Brazilian wax option should I book?</summary>
+            <div class="faq__body">
+              <p>If you're new to Strip, book 'new client'. Once you've had a Brazilian wax with us, you're in our system and now a Strip Club Member. This means that future bookings will be priced at our Strip Club Member rates, and based on the number of weeks since your last Brazilian wax with us. So if you last visited Strip 36 days ago, you fall in the 'under 6 weeks' category and so on.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>How can I tell when my last wax was?</summary>
+            <div class="faq__body">
+              <p>The system records your appointments. You will receive automated emails each time you book, so by saving these emails you will always have a record of your prior appointments and be able to work out pricing. However, should you require confirmation of price, please text or email us and we will get back to you within 24 hours.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Is it cheaper if I've recently shaved?</summary>
+            <div class="faq__body">
+              <p>All Brazilian waxing prices are based on the date of your last Brazilian wax at Strip, not the date you last shaved. Shaving just reduces hair length, not density, and will take the same time as unshaved hair, sometimes longer if the hair is very short. Please book for the appropriate treatment, bearing in mind you should wait 2 weeks after shaving before waxing.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Can I bring my child with me?</summary>
+            <div class="faq__body">
+              <p>Unfortunately not. The treatment room is full of potential hazards and you will not be in a position to supervise effectively.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--raised" id="care">
+      <div class="wrap wrap--narrow">
+        <div class="ornament" aria-hidden="true"></div>
+        <h2 class="center">Preparation &amp; aftercare</h2>
+
+        <h3 id="before" style="margin-top:2.5rem">Before your wax</h3>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>How long should my hair be for waxing?</summary>
+            <div class="faq__body">
+              <p>The hair should be at least 5 to 10mm for best results. Coarse hair should be at least 10mm for the first wax. As a general guide, wait around 2 weeks after shaving. You don't need to trim longer hair, in case you trim it too short.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>What will happen at my appointment?</summary>
+            <div class="faq__body">
+              <p>You will be greeted at your designated appointment time and asked a few questions about your treatment choice. You will then be given a minute alone to get ready. Hand sanitizer and wet wipes are provided. It is recommended that you bring an old pair of undies to wear. Many clients prefer to keep them on while others opt not to. Either way you will still achieve a smooth wax!</p>
+            </div>
+          </details>
+        </div>
 
         <div class="card" style="margin-top:2rem">
-          <h3>Do not wax if you</h3>
-          <ul style="padding-left:1.15rem;color:var(--muted)">
-            <li>Are using Roaccutane or another oral acne treatment, or have in the last 12 months</li>
-            <li>Use Retin-A, Differin, retinol or another topical exfoliating treatment on the area</li>
-            <li>Have had a chemical peel, laser treatment or microdermabrasion on the area recently</li>
-            <li>Are sunburnt, or the skin is broken, irritated or inflamed</li>
-            <li>Have a rash, cold sore, open cut, wart, mole or skin lesion in the area</li>
-            <li>Are taking antibiotics, blood thinning or steroid medication, without checking with your doctor first</li>
-            <li>Have had a recent cosmetic or surgical procedure on the area</li>
+          <h3 style="font-family:var(--font-ui);font-size:var(--step-0);letter-spacing:.14em;text-transform:uppercase;color:var(--pink)">Use caution if</h3>
+          <ul style="padding-left:1.15rem">
+            <li>You are using certain products that contain Retin-A, Renova, hydroquinone, AHAs, glycolic acid, salicylic acid, white willow bark, white willow bark extract and enzymes. These all strip cells from the skin as they are powerful exfoliators. Too much exfoliation combined with waxing could make skin red, bleed and turn scabby. Stop using these products for at least three days before, and three to four days after waxing. If the alpha-hydroxy is over 8% then you may have to wait several months before safely getting waxed. These can all cause heightened sensitivity and thinning to the skin, which will increase the likelihood of potential complications such as bruising and skin abrasions.</li>
+            <li>Please check with your doctor if you are unsure of your suitability for waxing.</li>
           </ul>
-          <p class="note" style="margin-top:1.5rem">If you are unsure, email us before you book. We would much rather talk it through than turn you away on the day.</p>
+
+          <h3 style="font-family:var(--font-ui);font-size:var(--step-0);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-top:2rem">Do not wax if</h3>
+          <ul style="padding-left:1.15rem">
+            <li>You take oral acne medications such as Accutane, or have stopped taking it less than a year ago, or any other prescription acne medication</li>
+            <li>You use blood thinners, or topical or oral cortisone, without the advice of a doctor</li>
+            <li>You have lupus or AIDS, or are in cancer therapy getting chemotherapy or radiation</li>
+            <li>You have sunburn, or have been in direct sunlight for a long period of time, or used a tanning bed within the last 24 hours</li>
+          </ul>
+
+          <h3 style="font-family:var(--font-ui);font-size:var(--step-0);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-top:2rem">Before waxing</h3>
+          <ul style="padding-left:1.15rem">
+            <li>Don't shower or bath immediately before waxing, as soaking the hair can soften it, allowing it to break more easily</li>
+            <li>Don't apply moisturiser or oil products, as these too can cause hair to break</li>
+            <li>Ensure that the areas to be waxed are clean. Wipes are provided for your convenience</li>
+            <li>Avoid drinking caffeinated products or alcohol, as these are stimulants that can increase sensitivity</li>
+            <li>Avoid exercising for at least 12 hours before waxing, to maintain a regular body temperature for your comfort</li>
+            <li>Take a couple of pain killers around 40 minutes before the treatment if you are concerned about pain</li>
+            <li>Wear an old pair of cotton undies as they can be left on during the wax. Strip Wax Boutique cannot be held responsible for any product spillage on them</li>
+            <li>Try to relax! Most people find the treatment to be much easier than they imagine</li>
+          </ul>
         </div>
+
+        <h3 id="after" style="margin-top:3rem">After your wax</h3>
+        <p>For the 12 to 24 hours after your wax:</p>
+        <div class="split" style="margin-top:1.5rem">
+          <div class="card">
+            <h3 style="font-family:var(--font-ui);font-size:var(--step-0);letter-spacing:.14em;text-transform:uppercase;color:var(--pink)">Don't</h3>
+            <ul style="padding-left:1.15rem">
+              <li>Exfoliate</li>
+              <li>Get direct sun exposure, sunbeds or spray tans</li>
+              <li>Use products with fragrance or ingredients that may irritate, such as deodorant or make-up</li>
+              <li>Wear tight clothing. Keep it loose to allow your skin to breathe</li>
+              <li>Take hot showers, baths, spas, steam rooms or saunas. Warm showers are fine</li>
+              <li>Exercise vigorously. Heavy exercise will increase perspiration and chafing</li>
+              <li>Touch the freshly waxed area</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 style="font-family:var(--font-ui);font-size:var(--step-0);letter-spacing:.14em;text-transform:uppercase;color:var(--pink)">Do</h3>
+            <ul style="padding-left:1.15rem">
+              <li>Keep the area clean and dry. A natural antiseptic like tea tree oil is great for this purpose, as it is both antimicrobial and antibacterial, and soothes the skin into the bargain. You may apply an over the counter antibiotic cream for a couple of days</li>
+              <li>Other anti-bacterial and antiseptic treatments are also fine to apply</li>
+              <li>Rinse the waxed area with cold water after bathing to close the follicles</li>
+              <li>Apply a cold compress or ice pack for 15 minutes to reduce redness and relieve inflammation if occurring</li>
+              <li>Gently exfoliate on the 3rd day after waxing, then continue to exfoliate every other day, using a spa glove or other exfoliating cloth</li>
+              <li>Moisturise the area often to keep skin supple and soft</li>
+              <li>Drink plenty of water! The more hydrated your skin, the less likely you are to develop ingrown hairs</li>
+            </ul>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1.5rem">If you do find that you suffer from ingrown hairs despite these preventative measures, Strip Wax Boutique recommends PFB Vanish ingrown hair treatment as a highly effective remedy. Use it 3 days after waxing, and not in the 5 days before waxing.</p>
       </div>
     </section>
 
-    <section class="section section--raised">
-      <div class="wrap split">
-        <div>
-          <h2>Before waxing</h2>
-          <h3 style="font-size:var(--step-0);font-family:var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-top:1.5rem">Do</h3>
-          <ul style="padding-left:1.15rem;color:var(--muted)">
-            <li>Let the hair grow to about a quarter of an inch, roughly the size of a grain of rice</li>
-            <li>Gently exfoliate the area two or three days beforehand</li>
-            <li>Shower before your appointment</li>
-            <li>Wear loose, breathable cotton clothing</li>
-            <li>Tell your therapist about any medication, skin condition or pregnancy</li>
-            <li>Take a paracetamol half an hour before if you are nervous about your first one</li>
-          </ul>
-          <h3 style="font-size:var(--step-0);font-family:var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-top:1.75rem">Don't</h3>
-          <ul style="padding-left:1.15rem;color:var(--muted)">
-            <li>Shave between appointments, as it blunts the hair and brings on ingrowns</li>
-            <li>Apply moisturiser, oil or fake tan to the area on the day</li>
-            <li>Sunbathe or use a sunbed in the 24 hours before</li>
-            <li>Book straight after a hot spa, sauna or swim</li>
-            <li>Turn up with hair shorter than a grain of rice, as the wax cannot grip it</li>
-          </ul>
-        </div>
-
-        <div>
-          <h2>After waxing</h2>
-          <p>Your skin may feel warm, tight or look a little pink for a few hours. That is completely normal and settles quickly.</p>
-          <h3 style="font-size:var(--step-0);font-family:var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-top:1.5rem">For the first 24 hours, avoid</h3>
-          <ul style="padding-left:1.15rem;color:var(--muted)">
-            <li>Hot baths, spas and saunas</li>
-            <li>Swimming pools and the beach</li>
-            <li>The gym, or anything that makes you sweat</li>
-            <li>Sunbeds and direct sun on the area</li>
-            <li>Fake tan, perfumed products and heavy moisturiser</li>
-            <li>Tight clothing and synthetic underwear</li>
-          </ul>
-          <h3 style="font-size:var(--step-0);font-family:var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--pink);margin-top:1.75rem">From day two</h3>
-          <ul style="padding-left:1.15rem;color:var(--muted)">
-            <li>Start exfoliating gently again to keep ingrowns away</li>
-            <li>Moisturise daily with something unperfumed</li>
-            <li>Stick to loose cotton underwear where you can</li>
-            <li>Rebook every 4 to 6 weeks to keep your hair on one growth cycle</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section" id="questions">
       <div class="wrap wrap--narrow">
-        <h2 class="center">Your questions</h2>
-
-        <div class="faq" style="margin-top:2rem">
+        <h2>Good to know</h2>
+        <div class="faq" style="margin-top:1.75rem">
           <details class="faq__item">
-            <summary>What is a Brazilian?</summary>
+            <summary>What wax do you use at Strip?</summary>
             <div class="faq__body">
-              <p>Everything removed from the labia, including between the bottom cheeks if required, with the front pubic area styled in a strip, a triangle, or taken all off. There is a full breakdown on the <a href="brazilian-wax-information.html">Brazilian wax information</a> page.</p>
+              <p>We use Pinkini Hot Wax and SOBerrylicious Strawberry Strip Wax by Lycon, a premier wax brand formulated for sensitive skin. For larger body areas an Argan Oil Strip Wax or Honey Strip Wax is used, which contains argania spinosa kernel oil, and leaves the skin smooth and soft.</p>
             </div>
           </details>
           <details class="faq__item">
             <summary>Is waxing popular with guys?</summary>
             <div class="faq__body">
-              <p>Very. Back, chest, shoulders and neck are our most booked men's services, and a full back is usually done in about 20 minutes. From chest to back, we have your manscaping options covered! Everything is on the <a href="waxing-menu.html#mens">waxing menu</a>.</p>
+              <p>Yes! Manscaping is on the increase in New Zealand. Back waxing is a fantastic way to avoid the shaggy bear look! Many athletes wax for increased performance and comfort. Waxing has been an integral part of body building regimes and continues to be the best way to display the results of all your hard work at the gym!</p>
+              <p>Please note, at this stage for male waxing, we do not offer any treatments in the bikini region.</p>
             </div>
           </details>
           <details class="faq__item">
             <summary>What should I expect after my first wax treatment?</summary>
             <div class="faq__body">
-              <p>Warm, slightly tight skin and some pinkness for a few hours. If it is your first wax, or it has been over eight weeks, your hair will not all be on the same growth cycle, so a little can come through in the days after. That evens out once you are waxing regularly.</p>
+              <p>Everyone's skin reacts differently to waxing, but you may find that you experience redness, bumps, white pimples or some irritation for a day or two. Don't fret, these are temporary and usually only last a few hours. If you have a big event coming up it is advisable to get your waxing done at least 48 hours in advance to minimize these potential after effects. Some people notice a mild itchiness as the hair grows out, but with the recommended post wax care these symptoms will be minimal.</p>
             </div>
           </details>
           <details class="faq__item">
-            <summary>Why choose waxing over shaving?</summary>
+            <summary>Will I get ingrown hairs?</summary>
             <div class="faq__body">
-              <p>Waxing removes the hair from the root rather than cutting it at the surface, so you stay smooth for weeks rather than days. Regrowth comes back finer and softer, there is no stubble, and you avoid the itchiness and razor rash that comes with shaving. Wax regularly and there is less hair each time.</p>
+              <p>Possibly. Waxing removes the entire hair from the follicle, and as your skin naturally hardens over the area that was waxed, it is important to keep that area gently exfoliated. You should aim to start regularly exfoliating the area on the 3rd day after waxing. Consistent exfoliation is one of the best preventative measures against ingrown hairs, so aim for every second day. You can combine this with a bodywash containing salicylic acid for best results. PFB Vanish ingrown hair treatment is a miracle ingrown hair solution.</p>
             </div>
           </details>
           <details class="faq__item">
-            <summary>How do I avoid ingrown hairs?</summary>
+            <summary>Can I wax if I'm pregnant?</summary>
             <div class="faq__body">
-              <p>Exfoliate gently a couple of times a week from day two, moisturise daily, wear loose cotton, and do not shave between appointments. Shaving is the single biggest cause of ingrowns in people who otherwise wax.</p>
+              <p>Absolutely! Hot wax is essential. But please consult your medical professional first.</p>
             </div>
           </details>
           <details class="faq__item">
-            <summary>How often should I come back?</summary>
+            <summary>What if I have my period?</summary>
             <div class="faq__body">
-              <p>Every four to six weeks. That keeps your hair on one growth cycle, which means a cleaner result, a quicker appointment, and a lower price through <a href="waxing-menu.html">Strip Club</a>.</p>
+              <p>Strip is happy to offer treatments while you have your period. Just wear a fresh tampon and maybe pop a couple of painkillers, as many people feel heightened sensitivity at this point in their cycle.</p>
             </div>
           </details>
           <details class="faq__item">
-            <summary>Can I be waxed on my period, or while pregnant?</summary>
+            <summary>How often should I get my wax treatment?</summary>
             <div class="faq__body">
-              <p>Both are fine. On your period, just wear a tampon or cup and let us know. Skin can be more sensitive at that time of the month and during pregnancy, so we would recommend hot wax rather than strip wax.</p>
+              <p>This varies from client to client, but most people aim for repeat waxing every 4 to 6 weeks. Regular waxing is essential if you wish to maintain your smooth results. The skin will be less sensitive if waxing is done regularly, and over time the hair follicle will weaken and the hair will come out more easily. As a bonus, you should find that you experience less hair growth over time.</p>
             </div>
           </details>
           <details class="faq__item">
-            <summary>What do you use?</summary>
+            <summary>Will waxing make my hair grow back thicker, stronger or darker?</summary>
             <div class="faq__body">
-              <p>A selection of Lycon's Pinkini and Vanilla Hot Wax, plus Lycon strip wax. Disposable gloves, spatulas and strips every time. We NEVER double dip, and hospital grade sterilisation is used for all non-disposables.</p>
-            </div>
-          </details>
-          <details class="faq__item">
-            <summary>Where do I find current prices?</summary>
-            <div class="faq__body">
-              <p>In the booking system. Brazilian pricing moves with your own visit history, so the booking calendar is the only place it is always right. <a href="https://bookings.gettimely.com/StripCuba/bb/book" rel="noopener">Check your price</a>.</p>
+              <p>No! The only thing known to stimulate hair growth is medication and hormones, whether natural or artificial. Therefore, waxing should not cause you to produce more hair. If you wax regularly, you should notice over time that your hair actually becomes thinner and sparser.</p>
             </div>
           </details>
         </div>
 
-        <div class="btn-row btn-row--center" style="margin-top:2.5rem">
+        <p class="center" style="margin-top:2.5rem">If you have any questions that are not answered here, please <a href="contact.html">contact us</a>.</p>
+        <div class="btn-row btn-row--center" style="margin-top:1.5rem">
           <a class="btn btn--primary" href="book-now.html">Book now</a>
-          <a class="btn btn--ghost" href="mailto:strip.wax.boutique@gmail.com">Ask us something</a>
         </div>
       </div>
     </section>
@@ -219,10 +274,11 @@
         <div>
           <h2>More</h2>
           <ul class="footer-list">
-            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="faqs.html">Waxing 101 &amp; FAQs</a></li>
+            <li><a href="faqs.html#care">Preparation &amp; aftercare</a></li>
             <li><a href="vajazzle.html">Vajazzle</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
-            <li><a href="book-now.html">Book now</a></li>
+            <li><a href="contact.html">Contact us</a></li>
           </ul>
         </div>
 

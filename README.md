@@ -17,8 +17,9 @@ Pages, S3).
 
 ## Pages
 
-Eight pages. Four sit in the top nav plus a Book button; the rest are linked
-from the footer, which keeps the header short without losing anything.
+Nine pages. Five sit in the top nav plus a Book button; the rest hang off the
+Brazilian Wax dropdown and the footer, which keeps the header short without
+burying anything.
 
 | File | Where it is linked | Contains |
 | --- | --- | --- |
@@ -26,10 +27,16 @@ from the footer, which keeps the header short without losing anything.
 | `waxing-menu.html` | Nav: Waxing | Treatments, bikini styles, hot vs strip wax, Strip Club |
 | `brazilian-wax-information.html` | Nav: Brazilian Wax | What a Brazilian is, which wax, pricing, Brazilian FAQ |
 | `location-and-about-us.html` | Nav: About | Address, directions, the studio's story, a few reviews |
+| `contact.html` | Nav: Contact | Message form, direct contact details, studio address |
 | `book-now.html` | Nav: Book now | Booking CTA and the full terms and conditions |
-| `faqs.html` | Footer | When not to wax, before and after care, general questions |
-| `vajazzle.html` | Footer | Vajazzle pricing, the Wikipedia definition, the short film |
+| `faqs.html` | Nav dropdown, footer | Waxing 101: booking, preparation, aftercare, general questions |
+| `vajazzle.html` | Nav dropdown, footer | Vajazzle pricing, the Wikipedia definition, the short film |
 | `testimonials.html` | Footer | Press mentions and the full set of client reviews |
+
+Hovering **Brazilian Wax** in the nav opens a submenu with Brazilian wax
+information, Preparation & aftercare, Waxing 101 & FAQs, and Vajazzle. It runs on
+`:hover` and `:focus-within` alone, so it needs no JavaScript, opens on keyboard
+focus, and collapses to an indented list on mobile.
 
 Filenames match the original site's URLs so existing links and search results keep working.
 
@@ -53,7 +60,8 @@ Black, hot magenta and white filigree, same as the original. What changed is the
 * **Reviews.** The home page carries a testimonial slider that advances on its own every six
   seconds, pauses on hover, focus and when the tab is hidden, and can be driven with the arrows
   or the dots. It is built on a scroll-snap track, so with JavaScript off it degrades to a
-  swipeable row with every quote still readable.
+  swipeable row with every quote still readable. It is deliberately compact: the track is about
+  146px tall rather than letting the longest review set the height.
 * **Filigree.** Regenerated as SVG (`assets/img/flourish.svg`, `ornament.svg`) and applied via
   CSS masks, so one file takes any colour at any size.
 
@@ -63,11 +71,17 @@ Written in the salon's own voice, using their wording wherever the original had 
 is waxing", "we take it OFF at Strip", "your goodies are in good hands", "no show is a no no".
 Kept free of em dashes and stock marketing phrasing.
 
+The Waxing 101 content on `faqs.html` is transcribed from the salon's own FAQ page, so the
+specifics are theirs: hair at 5 to 10mm, two weeks after shaving, Lycon Pinkini Hot Wax and
+SOBerrylicious Strawberry Strip Wax, Argan Oil or Honey Strip Wax on larger areas, no bikini
+region for male waxing, PFB Vanish for ingrowns, and the contra-indication lists. Anywhere the
+rest of the site touches those details it now matches.
+
 ## Structure
 
 ```
 assets/css/site.css   one stylesheet: tokens, base, layout, components
-assets/js/site.js     mobile menu, testimonial slider, footer year
+assets/js/site.js     mobile menu, testimonial slider, contact form, footer year
 assets/img/           filigree, ornament, favicon
 ```
 
@@ -94,24 +108,34 @@ publishes itself: vajazzles at $5 to $30, and 10% off with a student ID.
 
 To add prices later, put them in the `<span>` inside each `.treatments` item.
 
+## The contact form
+
+There is no backend, so the form hands the message to the visitor's email app.
+JavaScript builds a `mailto:` with the name, email, subject and message; without
+JavaScript the form's own `action="mailto:..."` does the same job. If a real
+inbox-backed form is wanted later, point the `action` at a form service (Formspree,
+Netlify Forms, Basin) and delete the `data-mailto` attribute, which is what the
+script keys off.
+
 ## Worth confirming before launch
 
 * The Instagram URL in the footer is inferred, not taken from the site
 * The Residents and Salient press mentions on `testimonials.html` have no link, because only
   the Top Reviews listing had a URL to work from
-* The FAQ body copy on `faqs.html` follows the original's headings (when not to wax, before,
-  after, questions), but the original's own wording under those headings was not legible in the
-  screenshots, so it is standard waxing guidance rather than a transcription
 * Opening hours are described as "by appointment" rather than invented
 * The original has studio interior and building exterior photos that are not in this repo. The
   natural slots are the `.map-frame` on the About page and the top of the Home page.
 
 ## Verified
 
-Checked in Chromium at 390px and 1440px across all eight pages: no JavaScript errors, no failed
+Checked in Chromium at 390px and 1440px across all nine pages: no JavaScript errors, no failed
 requests, no horizontal overflow, every internal link and in-page anchor resolves, the mobile
 menu and accordions behave, and all sampled text passes WCAG AA contrast.
 
 The slider is tested separately: arrows, dots, wrapping past either end, autoplay advancing,
 hover pausing it, and the JavaScript-disabled fallback still showing all seven quotes in a
 scrollable track.
+
+So is the nav submenu (hidden at rest, opens on hover, survives the pointer crossing the gap,
+opens on keyboard focus, inline on mobile) and the contact form (submit intercepted rather than
+navigating, required fields still enforced, mailto fallback present on the element).

@@ -100,6 +100,28 @@
     start();
   });
 
+  /* ---- Contact form ----------------------------------------------------
+     No backend, so the form hands the message to the visitor's email app.
+     Without JavaScript the mailto action on the form does the same job. */
+  var form = document.querySelector('[data-mailto]');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      if (!form.reportValidity()) return;
+      e.preventDefault();
+
+      var get = function (name) {
+        var el = form.elements[name];
+        return el ? el.value.trim() : '';
+      };
+
+      var body = 'Name: ' + get('name') + '\nEmail: ' + get('email') + '\n\n' + get('message');
+      window.location.assign('mailto:' + form.dataset.mailto +
+        '?subject=' + encodeURIComponent('Website enquiry: ' + get('subject')) +
+        '&body=' + encodeURIComponent(body));
+    });
+  }
+
   /* ---- Footer year ------------------------------------------------------ */
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
