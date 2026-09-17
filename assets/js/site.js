@@ -27,7 +27,7 @@
     });
 
     // Reset state when the layout returns to desktop width.
-    var mq = window.matchMedia('(min-width: 901px)');
+    var mq = window.matchMedia('(min-width: 1081px)');
     var onChange = function (e) { if (e.matches) setOpen(false); };
     mq.addEventListener ? mq.addEventListener('change', onChange) : mq.addListener(onChange);
   }

@@ -4,15 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Waxing Menu | Strip Wax Boutique</title>
-  <meta name="description" content="Full price list for Strip Wax Boutique: Brazilian and bikini, legs and body, face and brows, and men's waxing in Wellington CBD.">
+  <meta name="description" content="Every treatment at Strip Wax Boutique: Brazilian and bikini styles, legs and body, face and brows, men's waxing, plus hot and strip wax options.">
+  <meta name="theme-color" content="#0a0709">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <p class="promo">10% off for student ID card holders</p>
 
   <header class="site-header">
     <div class="wrap site-header__inner">
@@ -29,9 +32,11 @@
       <nav class="nav" id="primary-nav" aria-label="Primary">
         <ul class="nav__list">
             <li><a class="nav__link" href="index.html">Home</a></li>
+            <li><a class="nav__link" href="location-and-about-us.html">Location &amp; About</a></li>
             <li><a class="nav__link" href="waxing-menu.html" aria-current="page">Waxing Menu</a></li>
             <li><a class="nav__link" href="brazilian-wax-information.html">Brazilian Wax</a></li>
-            <li><a class="nav__link" href="location-and-about-us.html">Location &amp; About</a></li>
+            <li><a class="nav__link" href="vajazzle.html">Vajazzle</a></li>
+            <li><a class="nav__link" href="faqs.html">FAQs</a></li>
             <li><a class="nav__link" href="testimonials.html">Testimonials</a></li>
         </ul>
         <a class="btn btn--primary btn--sm" href="book-now.html">Book now</a>
@@ -41,17 +46,32 @@
 
   <main id="main">
     <section class="page-head">
+      <div class="filigree filigree--tr" aria-hidden="true"></div>
       <div class="wrap page-head__inner">
         <ol class="breadcrumb">
           <li><a href="index.html">Home</a></li>
           <li aria-current="page">Waxing menu</li>
         </ol>
         <h1>Waxing menu</h1>
-        <p class="lede">Every treatment we offer, top to toe. Prices are a guide &mdash; your therapist will confirm before starting.</p>
+        <p class="lede">Every treatment we offer, top to toe. Live pricing and availability sit in our booking system, so what you see there is always current.</p>
+        <div class="btn-row" style="margin-top:1.75rem">
+          <a class="btn btn--primary" href="https://bookings.gettimely.com/StripCuba/bb/book" rel="noopener">See live pricing &amp; book</a>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <nav class="jump" aria-label="Sections on this page">
+      <div class="wrap">
+        <ul>
+          <li><a href="#treatments">Treatments</a></li>
+          <li><a href="#styles">Bikini styles</a></li>
+          <li><a href="#waxes">Strip or hot wax</a></li>
+          <li><a href="#strip-club">Strip Club</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section" id="treatments">
       <div class="wrap">
         <div class="menu-filters" data-menu-filters role="group" aria-label="Filter treatments by category">
           <button class="chip" type="button" data-filter="all" aria-pressed="true">Everything</button>
@@ -59,8 +79,11 @@
           <button class="chip" type="button" data-filter="body" aria-pressed="false">Legs &amp; body</button>
           <button class="chip" type="button" data-filter="face" aria-pressed="false">Face &amp; brows</button>
           <button class="chip" type="button" data-filter="mens" aria-pressed="false">Men&rsquo;s</button>
+          <button class="chip" type="button" data-filter="extras" aria-pressed="false">Extras</button>
         </div>
 
+        <!-- Price slots are intentionally empty: an empty .price-item__price renders
+             "See booking". Drop the current figure inside the span to show it. -->
         <section class="menu-group" id="brazilian" data-category="brazilian">
           <div class="menu-group__title">
             <h2>Brazilian &amp; bikini</h2>
@@ -68,70 +91,38 @@
           </div>
           <ul class="price-list">
             <li class="price-item">
-              <span class="price-item__name">Brazilian &mdash; strip &amp; hot wax mix</span>
-              <span class="price-item__price">$70<small>New client</small></span>
-              <p class="price-item__desc">Lycon strip wax on the front, hot wax on the sensitive areas. Returning clients from $44 &mdash; see the <a href="brazilian-wax-information.html">Brazilian pricing tiers</a>.</p>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Brazilian &mdash; full hot wax</span>
-              <span class="price-item__price">$79<small>New client</small></span>
-              <p class="price-item__desc">High-quality vanilla hot wax throughout. Recommended if you&rsquo;re sensitive, new to waxing, or pregnant.</p>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Bikini line</span>
-              <span class="price-item__price">from $28</span>
-              <p class="price-item__desc">Tidy-up outside the underwear line.</p>
+              <span class="price-item__name">Brazilian</span>
+              <span class="price-item__price"></span>
+              <p class="price-item__desc">Everything removed from the labia, including between the bottom cheeks if required. The front pubic area can be styled in a strip, triangle or taken all off.</p>
             </li>
             <li class="price-item">
               <span class="price-item__name">Extended bikini</span>
-              <span class="price-item__price">from $38</span>
-              <p class="price-item__desc">Goes further in than a standard bikini, without going all the way to a Brazilian.</p>
+              <span class="price-item__price"></span>
+              <p class="price-item__desc">Removes hair from the sides and top, leaving a G-string style shape behind. You can add on between the bottom cheeks too if required.</p>
+            </li>
+            <li class="price-item">
+              <span class="price-item__name">Standard bikini</span>
+              <span class="price-item__price"></span>
+              <p class="price-item__desc">Removes hair from the sides and top, leaving a larger bikini style shape behind. You can add on between the bottom cheeks if required.</p>
             </li>
           </ul>
-          <p class="note" style="margin-top:1.5rem">Brazilian pricing depends on the wax you choose and the date of your last visit &mdash; roughly $44&ndash;$79. The full tier table is on the <a href="brazilian-wax-information.html">Brazilian wax information</a> page.</p>
+          <p class="note" style="margin-top:1.5rem">Had a Brazilian with us before? You&rsquo;re automatically a <a href="#strip-club">Strip Club member</a>, and your price drops based on how long it&rsquo;s been since your last visit.</p>
         </section>
 
         <section class="menu-group" id="body" data-category="body">
           <div class="menu-group__title">
             <h2>Legs, arms &amp; body</h2>
-            <span class="menu-group__note">Hot or strip wax</span>
+            <span class="menu-group__note">Strip or hot wax</span>
           </div>
           <ul class="price-list">
-            <li class="price-item">
-              <span class="price-item__name">Underarm</span>
-              <span class="price-item__price">$18<small>Strip wax</small></span>
-              <p class="price-item__desc">Hot wax $23 &mdash; gentler on sensitive skin.</p>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Half leg</span>
-              <span class="price-item__price">from $32</span>
-              <p class="price-item__desc">Lower leg to the knee, or upper leg.</p>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Three-quarter leg</span>
-              <span class="price-item__price">from $42</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Full leg</span>
-              <span class="price-item__price">from $52</span>
-              <p class="price-item__desc">Add a bikini line at a reduced rate when booked together.</p>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Half arm</span>
-              <span class="price-item__price">from $26</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Full arm</span>
-              <span class="price-item__price">from $35</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Stomach strip</span>
-              <span class="price-item__price">from $18</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Lower back</span>
-              <span class="price-item__price">from $22</span>
-            </li>
+            <li class="price-item"><span class="price-item__name">Underarm</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Half leg</span><span class="price-item__price"></span><p class="price-item__desc">Lower leg to the knee, or upper leg.</p></li>
+            <li class="price-item"><span class="price-item__name">Three-quarter leg</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Full leg</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Half arm</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Full arm</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Stomach strip</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Lower back</span><span class="price-item__price"></span></li>
           </ul>
         </section>
 
@@ -141,100 +132,131 @@
             <span class="menu-group__note">Precision work</span>
           </div>
           <ul class="price-list">
-            <li class="price-item">
-              <span class="price-item__name">Eyebrow shape</span>
-              <span class="price-item__price">from $22</span>
-              <p class="price-item__desc">Shaped to suit your face, not a stencil.</p>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Lip</span>
-              <span class="price-item__price">from $14</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Chin</span>
-              <span class="price-item__price">from $14</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Lip &amp; chin</span>
-              <span class="price-item__price">from $24</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Sides of face</span>
-              <span class="price-item__price">from $20</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Full face</span>
-              <span class="price-item__price">from $42</span>
-              <p class="price-item__desc">Brows, lip, chin and sides in one appointment.</p>
-            </li>
+            <li class="price-item"><span class="price-item__name">Eyebrow shape</span><span class="price-item__price"></span><p class="price-item__desc">Shaped to suit your face, not a stencil.</p></li>
+            <li class="price-item"><span class="price-item__name">Lip</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Chin</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Sides of face</span><span class="price-item__price"></span></li>
           </ul>
         </section>
 
         <section class="menu-group" id="mens" data-category="mens">
           <div class="menu-group__title">
             <h2>Men&rsquo;s waxing</h2>
-            <span class="menu-group__note">Quick and discreet</span>
+            <span class="menu-group__note">Manscaping, covered</span>
+          </div>
+          <ul class="price-list">
+            <li class="price-item"><span class="price-item__name">Full back</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Chest</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Chest &amp; stomach</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Shoulders</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Neck</span><span class="price-item__price"></span></li>
+            <li class="price-item"><span class="price-item__name">Men&rsquo;s underarm</span><span class="price-item__price"></span></li>
+          </ul>
+        </section>
+
+        <section class="menu-group" id="extras" data-category="extras">
+          <div class="menu-group__title">
+            <h2>Extras &amp; add-ons</h2>
+            <span class="menu-group__note">Finishing touches</span>
           </div>
           <ul class="price-list">
             <li class="price-item">
-              <span class="price-item__name">Full back</span>
-              <span class="price-item__price">$35<small>About 20 minutes</small></span>
+              <span class="price-item__name">Vajazzle</span>
+              <span class="price-item__price">$5&ndash;$30<small>Lasts up to 7 days</small></span>
+              <p class="price-item__desc">Add a vajazzle on to your Brazilian wax and prepare to shine. <a href="vajazzle.html">More about vajazzling</a>.</p>
             </li>
             <li class="price-item">
-              <span class="price-item__name">Chest</span>
-              <span class="price-item__price">from $35</span>
+              <span class="price-item__name">Hot wax upgrade</span>
+              <span class="price-item__price"></span>
+              <p class="price-item__desc">Add hot wax on to any Brazilian or bikini wax service.</p>
             </li>
             <li class="price-item">
-              <span class="price-item__name">Chest &amp; stomach</span>
-              <span class="price-item__price">from $48</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Shoulders</span>
-              <span class="price-item__price">from $22</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Neck</span>
-              <span class="price-item__price">from $16</span>
-            </li>
-            <li class="price-item">
-              <span class="price-item__name">Men&rsquo;s underarm</span>
-              <span class="price-item__price">from $22</span>
+              <span class="price-item__name">Between the cheeks</span>
+              <span class="price-item__price"></span>
+              <p class="price-item__desc">Add on to a standard or extended bikini if required.</p>
             </li>
           </ul>
         </section>
 
-        <p data-menu-empty hidden class="note">No treatments in that category yet &mdash; try another filter.</p>
+        <p data-menu-empty hidden class="note">Nothing in that category &mdash; try another filter.</p>
       </div>
     </section>
 
-    <section class="section section--sand">
-      <div class="wrap grid grid--2">
-        <div class="card reveal">
-          <h3>Hot wax or strip wax?</h3>
-          <p><strong>Hot wax</strong> is applied warm and lifts off without a strip. It grips the hair rather than the skin, so it&rsquo;s the pick for sensitive areas, first-timers, and anyone who&rsquo;s pregnant.</p>
-          <p><strong>Strip wax</strong> is faster over larger areas like legs, arms and backs, and costs a little less. Not sure? Tell your therapist and they&rsquo;ll recommend one.</p>
+    <section class="section section--raised" id="styles">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Choose your shape</p>
+          <h2>Brazilian &amp; bikini wax styles</h2>
+          <p class="lede">Not sure what style you want? Here&rsquo;s what each one actually removes.</p>
         </div>
-        <div class="card reveal">
-          <h3>Good to know</h3>
-          <p>Students with a current NZ student ID get <strong>10% off</strong> &mdash; just show it at your appointment.</p>
-          <p>Hair needs to be around a quarter of an inch long, about the length of a grain of rice, for the wax to grip properly. Don&rsquo;t shave in between visits.</p>
-          <p>Prices shown are a guide and may change. Your therapist will always confirm the price before starting.</p>
+        <div class="grid grid--3 reveal">
+          <article class="card">
+            <h3>Brazilian</h3>
+            <p>Everything removed from the labia, including between the bottom cheeks if required. The front pubic area can be styled in a strip, a triangle, or taken all off.</p>
+          </article>
+          <article class="card">
+            <h3>Extended bikini</h3>
+            <p>Hair removed from the sides and top, leaving a G-string style shape behind. Between the bottom cheeks can be added on.</p>
+          </article>
+          <article class="card">
+            <h3>Standard bikini</h3>
+            <p>Hair removed from the sides and top, leaving a larger bikini style shape behind. Between the bottom cheeks can be added on.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--tight cta-band">
-      <div class="wrap reveal">
+    <section class="section" id="waxes">
+      <div class="wrap grid grid--2 grid--start">
+        <div class="card reveal">
+          <p class="eyebrow">Option one</p>
+          <h2 style="font-size:var(--step-2)">Hot wax</h2>
+          <p>Recommended for sensitive areas, as it&rsquo;s gentle on skin and won&rsquo;t pull it too much. We use a selection of Lycon&rsquo;s Pinkini and Vanilla Hot Wax.</p>
+          <p>You can add hot wax on to any Brazilian or bikini wax service at Strip. It&rsquo;s the pick if you&rsquo;re new to waxing, sensitive, or pregnant.</p>
+        </div>
+        <div class="card reveal">
+          <p class="eyebrow">Option two</p>
+          <h2 style="font-size:var(--step-2)">Strip wax</h2>
+          <p>Faster over larger areas, and a great option for our regular clients and nearly all bikini services.</p>
+          <p><strong>Please note:</strong> strip wax for Brazilians is only available to those who are used to the method, as it can be a little tough on sensitive areas. For new clients to Brazilian waxing, a full strip wax Brazilian is not available.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--raised" id="strip-club">
+      <div class="wrap wrap--narrow">
+        <div class="ornament" aria-hidden="true"></div>
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Loyalty, without the card</p>
+          <h2>Strip Club membership</h2>
+          <p class="lede">The sooner you come back, the less you pay. That&rsquo;s the whole programme.</p>
+        </div>
+        <div class="stack reveal" style="max-width:66ch;margin-inline:auto">
+          <p>Strip is pleased to offer our clients a fantastic loyalty program. Once you&rsquo;ve had a Brazilian wax at Strip for the first time, you automatically become a Strip Club member and enjoy the savings <strong>and</strong> the smoothness.</p>
+          <p>Unlike other loyalty programs, you won&rsquo;t be issued with a card. Our booking system records every visit you make, and your Brazilian wax price is calculated on the frequency of your visits to us.</p>
+          <p>It&rsquo;s simple: once you&rsquo;ve visited us and had your first Brazilian wax at Strip, you&rsquo;ll be charged prices based on the number of weeks since your last appointment with us.</p>
+          <p class="note note--plain">Please note, our prices are based on your last visit to Strip, not elsewhere.</p>
+        </div>
+        <div class="btn-row btn-row--center" style="margin-top:2rem">
+          <a class="btn btn--primary" href="https://bookings.gettimely.com/StripCuba/bb/book" rel="noopener">See your price &amp; book</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap wrap--narrow" style="text-align:center">
         <h2>Found your treatment?</h2>
-        <p class="lede">Book it online and we&rsquo;ll see you on level 1.</p>
+        <p class="lede">Live pricing and availability are always in the booking system.</p>
         <div class="btn-row btn-row--center" style="margin-top:1.75rem">
           <a class="btn btn--primary" href="book-now.html">Book now</a>
+          <a class="btn btn--ghost" href="faqs.html">Read the FAQs</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <div class="filigree filigree--bl" aria-hidden="true"></div>
     <div class="wrap">
       <div class="site-footer__grid">
         <div>
@@ -242,7 +264,7 @@
             <span class="brand__mark">STRIP</span>
             <span class="brand__sub">Wax Boutique</span>
           </a>
-          <p style="margin-top:1.25rem;max-width:32ch;opacity:.85">Wellington's Brazilian wax specialists. Senior therapists, quality waxes, no fuss.</p>
+          <p style="margin-top:1.25rem;max-width:34ch;color:var(--muted)">All we do is waxing. Wellington&rsquo;s boutique studio for smooth, fast, affordable Brazilians since 2013.</p>
           <div class="socials">
             <a href="https://www.facebook.com/StripWaxBoutique/" aria-label="Strip Wax Boutique on Facebook" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.25-1.5 1.55-1.5h1.65V4.6A22 22 0 0 0 14.3 4.5c-2.4 0-4 1.45-4 4.1v2.3H7.6V14h2.7v8z"/></svg>
@@ -257,9 +279,11 @@
           <h2>Explore</h2>
           <ul class="footer-list">
               <li><a href="index.html">Home</a></li>
+              <li><a href="location-and-about-us.html">Location &amp; About</a></li>
               <li><a href="waxing-menu.html">Waxing Menu</a></li>
               <li><a href="brazilian-wax-information.html">Brazilian Wax</a></li>
-              <li><a href="location-and-about-us.html">Location &amp; About</a></li>
+              <li><a href="vajazzle.html">Vajazzle</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
               <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="book-now.html">Book now</a></li>
           </ul>
@@ -269,7 +293,7 @@
           <h2>Visit</h2>
           <ul class="footer-list">
             <li>Level 1, James Smith Building</li>
-            <li>Cnr Cuba &amp; Manners Street</li>
+            <li>49&ndash;55 Cuba Street</li>
             <li>Te Aro, Wellington 6011</li>
             <li><a href="location-and-about-us.html">How to find us &rarr;</a></li>
           </ul>
@@ -278,19 +302,34 @@
         <div>
           <h2>Get in touch</h2>
           <ul class="footer-list">
-            <li><a href="tel:+64210275528">0210 275 5284</a></li>
-            <li><a href="mailto:bookings@stripwaxboutique.co">bookings@stripwaxboutique.co</a></li>
-            <li>By appointment &mdash; book online any time</li>
+            <li><a href="tel:+642102755284">0210 275 5284</a></li>
+            <li><a href="mailto:strip.wax.boutique@gmail.com">strip.wax.boutique@gmail.com</a></li>
+            <li><a href="https://bookings.gettimely.com/StripCuba/bb/book" rel="noopener">Book online 24/7 &rarr;</a></li>
           </ul>
         </div>
       </div>
 
       <div class="site-footer__base">
         <p>&copy; <span data-year>2026</span> Strip Wax Boutique. All rights reserved.</p>
-        <p>Made in Wellington, Aotearoa New Zealand.</p>
+        <p>Waxing Wellington since 2013.</p>
       </div>
     </div>
   </footer>
+
+  <nav class="action-bar" aria-label="Quick contact">
+    <a href="tel:+642102755284">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1z"/></svg>
+      Call
+    </a>
+    <a href="mailto:strip.wax.boutique@gmail.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2m8 7 8-5H4z"/></svg>
+      Email
+    </a>
+    <a class="is-cta" href="book-now.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2v2h10V2h2v2h1a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V2zm13 8H4v10h16zm-9 2v2H9v-2zm4 0v2h-2v-2z"/></svg>
+      Book
+    </a>
+  </nav>
 
   <script src="assets/js/site.js" defer></script>
 </body>
