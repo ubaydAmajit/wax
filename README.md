@@ -52,8 +52,12 @@ Black, hot magenta and white filigree, same as the original. What changed is the
   as nav, buttons and labels. `--muted` is reserved for captions and small print so body copy
   never sits dim against the background.
 * **Hierarchy.** A real type scale, instead of headings at body size with huge line-height.
-* **Less chrome.** The original had eight nav items. This has four. No breadcrumbs, no filter
-  chips, no scroll animations, no in-page jump bars.
+* **Less chrome.** The original had eight nav items. This has five plus a Book button. No
+  breadcrumbs, no filter chips, no scroll animations, no in-page jump bars.
+* **Tiles over links.** The treatment groups on the home page are whole clickable tiles with a
+  hover border and a moving arrow, rather than a paragraph with a link underneath.
+* **Why Strip** sits in its own accent band: a pink wash, an ornament, filigree in the corner
+  and cards topped with a pink rule and a large numeral.
 * **Mobile.** The original's Phone / Email / Facebook strip becomes a fixed bottom bar (Call,
   Email, Book) in thumb reach, and the promo bar no longer collides with the menu button.
 * **Terms.** The booking T&Cs are a fee table plus an accordion rather than a wall of red text.
